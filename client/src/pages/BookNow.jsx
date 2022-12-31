@@ -8,7 +8,6 @@ import { HideLoading } from '../redux/alertsSlice';
 import '../resources/bus.css';
 
 function BookNow() {
-  
   const[selectedSeats,setSelectedSeats] = useState([])
   const params = useParams();
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import { Row,Col } from 'antd';
 import React from 'react'
-import '../resources/bus.css'
+import '../resources/bus.css';
 
 function SeatSelection({selectedSeats,setSelectedSeats,bus}) {
 

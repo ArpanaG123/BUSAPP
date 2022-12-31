@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { HideLoading, showLoading } from '../redux/alertsSlice';
 
-function Login() {
+function Login(){
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const onFinish = async(values) => {

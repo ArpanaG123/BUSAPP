@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 import BusForm from '../../components/BusForm';
 import PageTitle from '../../components/PageTitle'
 import { axiosInstance } from '../../helpers/axiosInstance';
-import { HideLoading, showLoading } from '../../redux/alertsSlice';
-import '../../resources/Layout.css'
+import { HideLoading } from '../../redux/alertsSlice';
+import '../../resources/Layout.css';
 
 
 function AdminBuses() {
@@ -16,7 +16,6 @@ function AdminBuses() {
 
   const getBuses = async() => {
     try {
-      //dispatch(showLoading());
       const response = await axiosInstance.post('/api/buses/get-all-buses',{});
       dispatch(HideLoading());
       if(response.data.success){

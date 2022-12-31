@@ -7,8 +7,8 @@ import { useDispatch } from "react-redux";
 import { HideLoading, showLoading } from "../redux/alertsSlice";
 
 
-function Register() {
-    const dispatch = useDispatch()
+function Register(){
+    const dispatch = useDispatch();
     const onFinish = async(values) => {
         try {
             dispatch(showLoading())

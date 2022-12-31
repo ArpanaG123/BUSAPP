@@ -1,5 +1,5 @@
 import React from 'react'
-import '../resources/Layout.css'
+import '../resources/Layout.css';
 
 function PageTitle({title}) {
   

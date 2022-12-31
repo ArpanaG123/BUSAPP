@@ -1,6 +1,6 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
-import '../resources/bus.css'
+import '../resources/bus.css';
 
 function Bus({bus}) {
     const navigate = useNavigate();

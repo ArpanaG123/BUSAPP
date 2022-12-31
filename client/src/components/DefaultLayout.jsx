@@ -2,8 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import '../resources/global.css'
-import '../resources/Layout.css'
+import '../resources/global.css';
+import '../resources/Layout.css';
 
 function DefaultLayout({children}) {
     const navigate = useNavigate();

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Modal,Form,Col,Row, message } from 'antd'
-import '../resources/Layout.css'
+import '../resources/Layout.css';
 import FormItem from 'antd/es/form/FormItem'
 import { HideLoading, showLoading } from '../redux/alertsSlice';
 import { axiosInstance } from '../helpers/axiosInstance';
 import { useDispatch } from 'react-redux'
-import '../resources/global.css'
+import '../resources/global.css';
 
 function BusForm({
     showBusForm,setShowBusForm,type = "add"}) {

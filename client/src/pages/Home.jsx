@@ -8,7 +8,7 @@ import { axiosInstance } from '../helpers/axiosInstance';
 import { HideLoading } from '../redux/alertsSlice';
 import '../resources/bus.css'
 
-function Home() {
+function Home(){
   const dispatch  = useDispatch();
   const[buses,setBuses] = useState([]);
   const[filters = {},setFilters] = useState({})
