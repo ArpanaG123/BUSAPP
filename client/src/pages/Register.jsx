@@ -11,8 +11,8 @@ function Register(){
     const dispatch = useDispatch();
     const onFinish = async(values) => {
         try {
-            dispatch(showLoading())
-            const response = await axios.post("/api/users/register",values);
+          dispatch(showLoading())
+            const response = await axios.post("https://shy-pear-trout-ring.cyclic.app/api/users/register",values);
             dispatch(HideLoading());
             if(response.data.success){
                 message.success(response.data.message);

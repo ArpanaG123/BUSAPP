@@ -21,16 +21,17 @@ function Home(){
       }
      })
     try {
-      const response = await axiosInstance.post('/api/buses/get-all-buses',filters);
+      const response = await axiosInstance.post('https://shy-pear-trout-ring.cyclic.app/api/buses/get-all-buses',filters);
       dispatch(HideLoading());
       if(response.data.success){
         setBuses(response.data.data)
-      }else{
+      }
+      else{
         message.error(response.data.message)
       }
     } catch (error) {
       dispatch(HideLoading());
-      message.error(error.message)
+      //message.error(error.message)
     }
   }
 

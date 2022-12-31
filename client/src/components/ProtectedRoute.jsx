@@ -5,7 +5,7 @@ import axios from 'axios';
 import { message } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUsers } from '../redux/usersSlice';
-import { HideLoading, showLoading } from '../redux/alertsSlice';
+import { HideLoading } from '../redux/alertsSlice';
 import DefaultLayout from './DefaultLayout';
 
 function ProtectedRoute({children}) {
@@ -15,8 +15,7 @@ function ProtectedRoute({children}) {
 
     const validateToken = async() => {
         try {
-            dispatch(showLoading())
-            const response = await axios.post('/api/users/get-user-by-id',{},{
+            const response = await axios.post('https://shy-pear-trout-ring.cyclic.app/api/users/get-user-by-id',{},{
                 headers : {
                     Authorization :`Bearer ${localStorage.getItem("token")}`
                 }

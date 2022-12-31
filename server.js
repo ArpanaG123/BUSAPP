@@ -13,8 +13,6 @@ const dbConfig = require('./config/dbConfig')
 
 const port = process.env.port || 7090;
 
-app.use(express.json())
-
 const usersRoute = require('./routes/usersRoute');
 const busesRoute = require('./routes/busesRoute');
 const bookingsRoute = require('./routes/bookingsRoute');

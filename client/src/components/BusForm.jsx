@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal,Form,Col,Row, message } from 'antd'
 import '../resources/Layout.css';
 import FormItem from 'antd/es/form/FormItem'
-import { HideLoading, showLoading } from '../redux/alertsSlice';
+import { HideLoading } from '../redux/alertsSlice';
 import { axiosInstance } from '../helpers/axiosInstance';
 import { useDispatch } from 'react-redux'
 import '../resources/global.css';
@@ -12,10 +12,10 @@ function BusForm({
         const dispatch = useDispatch();
     const onFinish = async(values) => {
         try {
-            dispatch(showLoading())
+            //dispatch(showLoading())
             let response = null;
             if(type === "add"){
-                response = await axiosInstance.post('/api/buses/add-bus',values)
+                response = await axiosInstance.post('https://shy-pear-trout-ring.cyclic.app/api/buses/add-bus',values)
             }else{
 
             }

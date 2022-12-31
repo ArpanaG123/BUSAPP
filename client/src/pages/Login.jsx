@@ -11,13 +11,14 @@ function Login(){
     const navigate = useNavigate()
     const onFinish = async(values) => {
         try {
-            dispatch(showLoading())
-            const response = await axios.post("/api/users/login",values);
+          dispatch(showLoading());
+            const response = await axios.post("https://shy-pear-trout-ring.cyclic.app/api/users/login",values);
             dispatch(HideLoading());
             if(response.data.success){
                 message.success(response.data.message);
                 localStorage.setItem("token",response.data.data);
-                navigate('/')
+                navigate('/');
+                alert("After loggedIn successfully,Please Refresh Once");
             }else{
                 message.error(response.data.message)
             } 
