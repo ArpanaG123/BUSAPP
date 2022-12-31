@@ -4,14 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import {Form,message} from 'antd'
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
-import { HideLoading, showLoading } from '../redux/alertsSlice';
+import { HideLoading } from '../redux/alertsSlice';
 
 function Login(){
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const onFinish = async(values) => {
         try {
-          dispatch(showLoading());
             const response = await axios.post("https://shy-pear-trout-ring.cyclic.app/api/users/login",values);
             dispatch(HideLoading());
             if(response.data.success){

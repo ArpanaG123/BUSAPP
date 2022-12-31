@@ -26,9 +26,9 @@ function Home(){
       if(response.data.success){
         setBuses(response.data.data)
       }
-      else{
-        message.error(response.data.message)
-      }
+      // else{
+      //   message.error(response.data.message)
+      // }
     } catch (error) {
       dispatch(HideLoading());
       //message.error(error.message)

@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import { Form, message } from "antd";
 import axios from 'axios'
 import { useDispatch } from "react-redux";
-import { HideLoading, showLoading } from "../redux/alertsSlice";
+import { HideLoading } from "../redux/alertsSlice";
 
 
 function Register(){
     const dispatch = useDispatch();
     const onFinish = async(values) => {
         try {
-          dispatch(showLoading())
             const response = await axios.post("https://shy-pear-trout-ring.cyclic.app/api/users/register",values);
             dispatch(HideLoading());
             if(response.data.success){
@@ -43,7 +42,7 @@ function Register(){
             <input type="text" placeholder="Enter Your Name" className="nameInput" />
           </Form.Item>
           <br />
-          <Form.Item label = "Email" name="email" className="emailLabel" >
+          <Form.Item label = "Email" name = "email" className="emailLabel" >
             <input type="email" placeholder="Enter Your Email" className="emailInput"/>
           </Form.Item>
           <Form.Item label = "Password" name="password" className="passLabel">

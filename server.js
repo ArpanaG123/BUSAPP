@@ -8,6 +8,7 @@ app.use(cors())
 mongoose.set('strictQuery', false);
 
 require('dotenv').config()
+app.use(express.json())
 
 const dbConfig = require('./config/dbConfig')
 

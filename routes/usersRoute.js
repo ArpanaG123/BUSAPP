@@ -8,7 +8,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 router.post('/register', async(req,res) => {
     try {
-        const existingUser = await User.findOne({email:req.body.email});
+        const existingUser = await User.findOne({email:req.body});
         if(existingUser){
             return res.send({
                 message:"User already exists",
@@ -38,7 +38,7 @@ router.post('/register', async(req,res) => {
 //Login-users
 router.post('/login', async(req,res) => {
     try {
-        const userExist = await User.findOne({email:req.body.email});
+        const userExist = await User.findOne({email:req.body});
         if(!userExist){
             return res.send({
                 message:"User does not Exist",
