@@ -1,4 +1,4 @@
-import { Col, message, Row } from 'antd';
+import { Col, Row } from 'antd';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -31,7 +31,7 @@ function Home(){
       // }
     } catch (error) {
       dispatch(HideLoading());
-      message.error(error.message)
+      //message.error(error.message)
     }
   }
 
