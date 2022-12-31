@@ -1,7 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
-
+const cors = require('cors')
 const app = express();
+
+app.use(cors())
 
 mongoose.set('strictQuery', false);
 
@@ -19,7 +21,7 @@ const bookingsRoute = require('./routes/bookingsRoute');
 
 app.use('/api/users', usersRoute);
 app.use('/api/buses', busesRoute);
-app.use('/api/bookings',bookingsRoute)
+app.use('/api/bookings',bookingsRoute);
 
 
 app.listen(port,() => {
