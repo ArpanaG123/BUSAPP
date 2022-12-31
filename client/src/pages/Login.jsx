@@ -11,7 +11,7 @@ function Login(){
     const navigate = useNavigate()
     const onFinish = async(values) => {
         try {
-            const response = await axios.post("https://shy-pear-trout-ring.cyclic.app/api/users/login",values);
+            const response = await axios.post("/api/users/login",values);
             dispatch(HideLoading());
             if(response.data.success){
                 message.success(response.data.message);
@@ -23,7 +23,7 @@ function Login(){
             } 
         } catch (error) {
             dispatch(HideLoading())
-            message.error(error.message) 
+            //message.error(error.message) 
         }
     }
     
@@ -60,5 +60,4 @@ function Login(){
   );
 }
 
-
-export default Login
+export default Login;

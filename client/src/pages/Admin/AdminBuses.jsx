@@ -16,7 +16,7 @@ function AdminBuses() {
 
   const getBuses = async() => {
     try {
-      const response = await axiosInstance.post('https://shy-pear-trout-ring.cyclic.app/api/buses/get-all-buses',{});
+      const response = await axiosInstance.post('/api/buses/get-all-buses',{});
       dispatch(HideLoading());
       if(response.data.success){
         setBuses(response.data.data)

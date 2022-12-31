@@ -15,7 +15,7 @@ function BookNow() {
 
   const getBus = async() => {
     try {
-      const response = await axiosInstance.post('https://shy-pear-trout-ring.cyclic.app/api/buses/get-bus-by-id',{
+      const response = await axiosInstance.post('/api/buses/get-bus-by-id',{
         _id:params.id,
       });
       dispatch(HideLoading())
@@ -32,7 +32,7 @@ function BookNow() {
 
   const bookNow = async() => {
     try {
-      const response = await axiosInstance.post("https://shy-pear-trout-ring.cyclic.app/api/bookings/book-seat",{
+      const response = await axiosInstance.post("/api/bookings/book-seat",{
         bus:bus._id,
         seats : selectedSeats,
       });

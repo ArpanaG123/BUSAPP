@@ -15,7 +15,9 @@ function ProtectedRoute({children}) {
 
     const validateToken = async() => {
         try {
-            const response = await axios.post('https://shy-pear-trout-ring.cyclic.app/api/users/get-user-by-id',{},{
+            const response = await axios.post('/api/users/get-user-by-id',
+            {},
+            {
                 headers : {
                     Authorization :`Bearer ${localStorage.getItem("token")}`
                 }
