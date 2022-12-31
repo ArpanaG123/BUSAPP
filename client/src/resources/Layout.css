@@ -1,0 +1,90 @@
+.layout-parent{
+    display: flex;
+    height: 100%;
+    width: 98%;
+    padding: 15px;
+    height: 146vh;
+    margin-top: 10px;
+    margin-left: -15px;
+    gap:10px;
+}
+
+.body{
+    width: 90%;
+}
+
+.sidebar{
+    background-color:#009EFF;
+    border-radius: 5px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+.menu{
+    margin-top: 100px;
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding:  5px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    gap: 20px;
+}
+
+.menu-item i{
+    font-size: 20px;
+    color: white;
+}
+
+.menu-item span{
+    color: white;
+    font-size: 18px;
+}
+
+.header{
+    box-shadow: 5px 2px 5px 2px palevioletred;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    color: #2874f0;
+    background-color: pink;
+}
+
+.logo{
+    font-weight:bolder;
+    color:#EB455F;
+}
+
+.role{
+    color: black;
+    font-size: 15px;
+}
+
+.primary-btn{
+    background-color: green;
+    border: none;
+    color: white;
+    width:100px;
+    height:40px;
+    margin-top: 20px;
+}
+
+.save-btn{
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width:80px;
+    height:40px;
+}
+
+.AntdInpu{
+    width: 100%;
+}

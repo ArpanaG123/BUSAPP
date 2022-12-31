@@ -1,0 +1,159 @@
+.nameingBus{
+    color: blue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.fromBus{
+    color:#3A4F7A;
+    font-family: 'Lato', sans-serif;
+}
+
+.pricebus{
+    color: #227C70;
+}
+
+.bookButton{
+    background-color: green;
+    border: none;
+    color: white;
+}
+
+.journing{
+    color: purple
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Baumans&family=Fascinate&family=Lato:ital,wght@1,900&family=Lobster&family=Manrope:wght@400;500&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+.bus-container{
+    width:300px !important;
+    border: 2px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.seat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border:2px solid lightgray;
+    border-radius: 5px;
+}
+
+.selected-seat{
+    background-color: green;
+    color: white;
+}
+
+.booked-seat{
+    background-color: grey;
+    color: white;
+    pointer-events: none !important;
+    cursor: disabled !important;
+}
+
+.booknowBtn{
+    background-color:#E14D2A;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.disabled-booknowBtn{
+    background-color:gray !important;
+    color: white;
+    border-radius: 2px;
+    border: none !important;
+    margin-top: 20px;
+    padding: 5px;
+    cursor: not-allowed;
+
+}
+
+.markersBook{
+    display: flex;
+    margin-bottom:10px;
+    margin-top: 5%;
+}
+.avail{
+    background-color: whitesmoke;
+    color: white;
+}
+.bookedS{
+    background-color:gray;
+    margin-left:60px;
+    color: white;
+}
+
+.selectedS{
+    background-color: green;
+    margin-left: 50px;
+    color: white;
+}
+
+.textpos{
+    display: flex;
+    width: 99%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textf1{
+    width: 49%;
+    margin-right: 30px;
+    height: 40px;
+    border: 1px solid #EB455F;
+}
+
+.textf2{
+    width: 49%;
+    height: 40px;
+    border: 1px solid #EB455F;
+}
+
+.serachButton{
+    background-color: green;
+    border: none;
+    color: white;
+    width:80px;
+    height:40px;
+    margin-left: 30px;
+}
+
+.claerButton{
+    background-color: orangered;
+    border: none;
+    color: white;
+    width:80px;
+    height:40px;
+}
+
+.horizontal{
+    color:orangered;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .serachButton{
+        background-color: green;
+        border: none;
+        color: white;
+        width:80px;
+        height:40px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    
+    .claerButton{
+        background-color: orangered;
+        border: none;
+        color: white;
+        width:80px;
+        height:40px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }  
+}
